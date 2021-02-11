@@ -1,0 +1,19 @@
+{
+  "name": "hey-avi",
+  "version": "1.0.0",
+  "description": "Hey Avi! A friendly slack bot for programmers. Made in honor of Avi Flombaum.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micahbowie/hey-avi.git"
+  },
+  "author": "Micah Bowie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/micahbowie/hey-avi/issues"
+  },
+  "homepage": "https://github.com/micahbowie/hey-avi#readme"
+}
