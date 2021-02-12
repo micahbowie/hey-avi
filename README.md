@@ -1,4 +1,4 @@
-# Hey Ai
+# Hey Avi
 
  Hey Avi is a slack bot created in honor of Avi Flombaum. Avi is a friendly bot that pretty much just tells software jokes!
 
