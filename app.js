@@ -8,9 +8,14 @@ const app = new App({
   signingSecret: process.env.SLACK_SIGNING_SECRET
 });
 
-(async () => {
-  // Start your app
-  await app.start(process.env.PORT || 3000);
+//first message function "Hey!"
+app.message('hey avi', async({message, say}) => {
+  await say('Hey!');
+});
 
+
+//Starts app
+(async () => {
+  await app.start(process.env.PORT || 3000);
   console.log('⚡️ Bolt app is running!');
 })();
