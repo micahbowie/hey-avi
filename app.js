@@ -1,7 +1,8 @@
 require('dotenv').config();
 
 const { App } = require("@slack/bolt");
-
+const fetch = require("node-fetch");
+const jokeApi =  'https://official-joke-api.appspot.com/jokes/programming/random'
 
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
@@ -27,6 +28,22 @@ app.message('who is your dad', async({message, say}) => {
 app.message('what are your thoughts about life', async({message, say}) => {
   await say('"Life should be a wonderful adventure. Experience everything this world has to offer. I love you." \n -Avi Flombaum');
 });
+
+//tell me a joke function
+app.message('tell me a joke', async({message, say}) => {
+  fetch(jokeApi, {
+    method: 'GET',
+    headers: {"Accepts": "application/json", "Content-Type": "application/json"}
+  })
+  .then(response => response.json())
+  .then(joke => {
+      say(`${joke[0].setup} \n ${joke[0].punchline}`);
+   });
+});
+
+
+
+
 
 //Starts app
 (async () => {
