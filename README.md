@@ -8,6 +8,7 @@
 
 ## Usage
 
+You can text Avi any of these and he will interact with you:
 - "hey avi"
 - "tell me a joke"
 - "what are your thoughts about life"
